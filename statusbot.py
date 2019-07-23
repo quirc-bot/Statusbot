@@ -2,7 +2,7 @@
 #!/usr/bin/env python3.6
 import configparser, json, mwclient
 from mwclient import errors
-import JustIRC
+import QuIRC
 import random
 import requests
 import re
@@ -10,7 +10,7 @@ import time
 lastuser = ''
 pages = ''
 
-bot = JustIRC.IRCConnection()
+bot = QuIRC.IRCConnection()
 
 def on_connect(bot):
     bot.set_nick("RF1_Bot")
