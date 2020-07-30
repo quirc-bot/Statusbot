@@ -71,23 +71,23 @@ def on_message(
     sendernick = sender.split('!')[0]
     senderhost = sender.split('@')[1]
     if message.lower().startswith('!online') and sendernick in admins:
-        bot.send_message(changer, '.status ' + wiki + ' online')
-        bot.send_message(room, .topic online')
+        bot.send_message(changer, '\.status ' + wiki + ' online')
+        bot.send_message(room, '\.topic online')
      if message.lower().startswith('!offline') and sendernick in admins:
-        bot.send_message(changer, '.status ' + wiki + ' offline')
-        bot.send_message(room, .topic online')
+        bot.send_message(changer, '\.status ' + wiki + ' offline')
+        bot.send_message(room, '\.topic offline')
     if message.lower().startswith('!around') and sendernick in admins:
-        bot.send_message(changer, '.status ' + wiki + ' around')
-        bot.send_message(room, .topic online')
-    if message.lower().startswith('busyon') and sendernick in admins:
-        bot.send_message(changer, '.status ' + wiki + ' busy on wiki')
-        bot.send_message(room, .topic online')
+        bot.send_message(changer, '\.status ' + wiki + ' around')
+        bot.send_message(room, '\.topic around')
+    if message.lower().startswith('!busyon') and sendernick in admins:
+        bot.send_message(changer, '\.status ' + wiki + ' busy on wiki')
+        bot.send_message(room, '\.topic busy on wiki')
     if message.lower().startswith('!busyoff') and sendernick in admins:
-        bot.send_message(changer, '.status ' + wiki + ' busy off wiki')
-        bot.send_message(room, .topic online')
+        bot.send_message(changer, '\.status ' + wiki + ' busy off wiki')
+        bot.send_message(room, '\.topic busy off wiki')
     if message.lower().startswith('!wikibreak') and sendernick in admins:
-        bot.send_message(changer, '.status ' + wiki + ' on wikibreak')
-        bot.send_message(room, .topic online')
+        bot.send_message(changer, '\.status ' + wiki + ' on wikibreak')
+        bot.send_message(room, '\.topic on wikibreak')
     if message.lower() == '!getinfo' and sendernick in admins:
         bot.set_nick(nick + '-down')
         bot.send_message(sendernick, 'Rebuilding')
@@ -110,23 +110,23 @@ def on_pm(
     global admins
     print('Got PM')
     if message.lower().startswith('!online') and sender in admins:
-        bot.send_message(changer, '.status ' + wiki + ' online')
-        bot.send_message(room, .topic online')
+        bot.send_message(changer, '\.status ' + wiki + ' online')
+        bot.send_message(room, '\.topic online')
     if message.lower().startswith('!offline') and sender in admins:
-        bot.send_message(changer, '.status ' + wiki + ' offline')
-        bot.send_message(room, .topic online')
+        bot.send_message(changer, '\.status ' + wiki + ' offline')
+        bot.send_message(room, '\.topic offline')
     if message.lower().startswith('!around') and sender in admins:
-        bot.send_message(changer, '.status ' + wiki + ' around')
-        bot.send_message(room, .topic online')
-    if message.lower().startswith('busyon') and sender in admins:
-        bot.send_message(changer, '.status ' + wiki + ' busy on wiki')
-        bot.send_message(room, .topic online')
+        bot.send_message(changer, '\.status ' + wiki + ' around')
+        bot.send_message(room, '\.topic around')
+    if message.lower().startswith('!busyon') and sender in admins:
+        bot.send_message(changer, '\.status ' + wiki + ' busy on wiki')
+        bot.send_message(room, '\.topic busy on wiki')
     if message.lower().startswith('!busyoff') and sender in admins:
-        bot.send_message(changer, '.status ' + wiki + ' busy off wiki')
-        bot.send_message(room, .topic online')
+        bot.send_message(changer, '\.status ' + wiki + ' busy off wiki')
+        bot.send_message(room, '\.topic busy off wiki')
     if message.lower().startswith('!wikibreak') and sender in admins:
-        bot.send_message(changer, '.status ' + wiki + ' on wikibreak')
-        bot.send_message(room, .topic online')
+        bot.send_message(changer, '\.status ' + wiki + ' on wikibreak')
+        bot.send_message(room, '\.topic on wikibreak')
     if message.lower() == 'getinfo' and sender in admins or message.lower() =="!getinfo" and sender in admins:
         bot.set_nick(nick + '-down')
         bot.send_message(sender, 'Rebuilding')
