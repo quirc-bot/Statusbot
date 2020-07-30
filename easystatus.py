@@ -73,7 +73,7 @@ def on_message(
     if message.lower().startswith('!online') and sendernick in admins:
         bot.send_message(changer, '\.status ' + wiki + ' online')
         bot.send_message(room, '\.topic online')
-     if message.lower().startswith('!offline') and sendernick in admins:
+    if message.lower().startswith('!offline') and sendernick in admins:
         bot.send_message(changer, '\.status ' + wiki + ' offline')
         bot.send_message(room, '\.topic offline')
     if message.lower().startswith('!around') and sendernick in admins:
